@@ -1,27 +1,24 @@
-package uz.jl.entity.quiz;
+package uz.jl.entity.subject;
 
 import lombok.*;
 import org.bson.types.ObjectId;
 import uz.jl.entity.GenericCollection;
 import uz.jl.entity.test.Test;
 
-import java.util.Date;
 import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Quiz extends GenericCollection {
+public class Subject extends GenericCollection {
+    private String name;
     private List<Test> tests;
-    private Date deadline;
-    private boolean is_completed;
 
     @Builder(builderMethodName = "childBuilder")
-    public Quiz(ObjectId id, List<Test> tests, Date deadline, boolean is_completed) {
+    public Subject(ObjectId id, String name, List<Test> tests) {
         super(id);
+        this.name = name;
         this.tests = tests;
-        this.deadline = deadline;
-        this.is_completed = is_completed;
     }
 }
