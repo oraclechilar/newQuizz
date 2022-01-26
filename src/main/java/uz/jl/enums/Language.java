@@ -1,4 +1,4 @@
-package uz.jl.enums.Language;
+package uz.jl.enums;
 
 import lombok.Getter;
 

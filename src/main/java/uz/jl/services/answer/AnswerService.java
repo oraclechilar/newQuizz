@@ -1,14 +1,17 @@
-package uz.jl.services;
+package uz.jl.services.answer;
 
 import org.bson.types.ObjectId;
-import uz.jl.criteria.AnswerCriteria;
+import uz.jl.criteria.answer.AnswerCriteria;
 import uz.jl.dto.answer.AnswerCreateDto;
 import uz.jl.dto.answer.AnswerDto;
 import uz.jl.dto.answer.AnswerUpdateDto;
 import uz.jl.mappers.answer.AnswerMapper;
-import uz.jl.repository.AnswerRepository;
-import uz.jl.resonse.Data;
-import uz.jl.resonse.ResponseEntity;
+import uz.jl.repository.answer.AnswerRepository;
+import uz.jl.response.Data;
+import uz.jl.response.ResponseEntity;
+import uz.jl.services.AbstractService;
+import uz.jl.services.GenericCrudService;
+import uz.jl.services.GenericService;
 
 import java.util.List;
 
@@ -16,7 +19,7 @@ import java.util.List;
  * @author Bakhromjon Wed, 10:04 AM 1/26/2022
  */
 public class AnswerService extends AbstractService<AnswerRepository, AnswerMapper>
-implements GenericCrudService<AnswerCreateDto, AnswerUpdateDto, ObjectId>, GenericService<AnswerDto, AnswerCriteria, ObjectId>{
+implements GenericCrudService<AnswerCreateDto, AnswerUpdateDto, ObjectId>, GenericService<AnswerDto, AnswerCriteria, ObjectId> {
     public AnswerService(AnswerRepository repository, AnswerMapper mapper) {
         super(repository, mapper);
     }

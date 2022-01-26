@@ -1,4 +1,4 @@
-package uz.jl.utils.validator;
+package uz.jl.validator;
 
 import org.bson.types.ObjectId;
 import uz.jl.dto.answer.AnswerCreateDto;

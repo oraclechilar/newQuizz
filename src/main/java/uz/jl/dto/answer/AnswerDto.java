@@ -1,10 +1,18 @@
-package uz.jl.dto.auth;
+package uz.jl.dto.answer;
 
+import lombok.*;
 import uz.jl.dto.GenericDto;
 
 /**
  * @author Bakhromjon Wed, 9:36 AM 1/26/2022
  */
-public class UserDto extends GenericDto {
-
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class AnswerDto extends GenericDto {
+    private String text;
+    private boolean is_correct;
+    private boolean is_selected;
 }

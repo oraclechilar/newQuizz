@@ -2,7 +2,7 @@ package uz.jl.entity.subject;
 
 import lombok.*;
 import org.bson.types.ObjectId;
-import uz.jl.entity.GenericCollection;
+import uz.jl.entity.Auditable;
 import uz.jl.entity.test.Test;
 
 import java.util.List;
@@ -11,14 +11,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Subject extends GenericCollection {
+public class Subject extends Auditable {
     private String name;
     private List<Test> tests;
-
-    @Builder(builderMethodName = "childBuilder")
-    public Subject(ObjectId id, String name, List<Test> tests) {
-        super(id);
-        this.name = name;
-        this.tests = tests;
-    }
 }

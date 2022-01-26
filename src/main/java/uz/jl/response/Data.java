@@ -1,4 +1,4 @@
-package uz.jl.resonse;
+package uz.jl.response;
 
 import lombok.*;
 

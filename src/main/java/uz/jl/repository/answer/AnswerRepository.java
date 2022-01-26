@@ -1,11 +1,11 @@
-package uz.jl.repository;
+package uz.jl.repository.answer;
 
 import org.bson.types.ObjectId;
-import uz.jl.criteria.AnswerCriteria;
-import uz.jl.criteria.SubjectCriteria;
+import uz.jl.criteria.answer.AnswerCriteria;
 import uz.jl.dao.GenericDao;
 import uz.jl.entity.answer.Answer;
-import uz.jl.entity.subject.Subject;
+import uz.jl.repository.GenericCrudRepository;
+import uz.jl.repository.GenericRepository;
 
 import java.util.List;
 import java.util.Optional;

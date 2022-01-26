@@ -4,8 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * @author Bakhromjon Sun, 9:35 PM 1/23/2022
+ * @author Elmurodov Javohir, Mon 12:28 PM. 11/29/2021
  */
+
 @Getter
 @AllArgsConstructor
 public enum HttpStatus {

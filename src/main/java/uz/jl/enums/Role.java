@@ -1,4 +1,4 @@
-package uz.jl.enums.Role;
+package uz.jl.enums;
 
 import lombok.Getter;
 

@@ -1,33 +1,36 @@
-package uz.jl.mappers.subject;
+package uz.jl.mappers.test;
 
-import org.bson.types.ObjectId;
 import uz.jl.dto.subject.SubjectCreateDto;
 import uz.jl.dto.subject.SubjectDto;
 import uz.jl.dto.subject.SubjectUpdateDto;
+import uz.jl.dto.test.TestCreateDto;
+import uz.jl.dto.test.TestDto;
+import uz.jl.dto.test.TestUpdateDto;
 import uz.jl.entity.subject.Subject;
+import uz.jl.entity.test.Test;
 import uz.jl.mappers.GenericMapper;
 
 /**
  * @author Bakhromjon Wed, 4:00 PM 1/26/2022
  */
-public class SubjectMapper implements GenericMapper<Subject, SubjectDto,SubjectCreateDto, SubjectUpdateDto> {
+public class TestMapper implements GenericMapper<Test, TestDto, TestCreateDto, TestUpdateDto> {
     @Override
-    public Subject fromDto(SubjectDto dto) {
+    public Test fromDto(TestDto dto) {
         return null;
     }
 
     @Override
-    public Subject fromCreateDto(SubjectCreateDto dto) {
+    public Test fromCreateDto(TestCreateDto dto) {
         return null;
     }
 
     @Override
-    public Subject fromUpdateDto(SubjectUpdateDto dto) {
+    public Test fromUpdateDto(TestUpdateDto dto) {
         return null;
     }
 
     @Override
-    public SubjectDto toDto(Subject entity) {
+    public TestDto toDto(Test entity) {
         return null;
     }
 }

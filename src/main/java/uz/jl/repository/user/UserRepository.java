@@ -1,12 +1,11 @@
-package uz.jl.repository;
+package uz.jl.repository.user;
 
 import org.bson.types.ObjectId;
-import uz.jl.criteria.UserCriteria;
+import uz.jl.criteria.user.UserCriteria;
 import uz.jl.dao.GenericDao;
-import uz.jl.dto.auth.UserCreateDto;
-import uz.jl.dto.auth.UserDto;
-import uz.jl.dto.auth.UserUpdateDto;
 import uz.jl.entity.auth.User;
+import uz.jl.repository.GenericCrudRepository;
+import uz.jl.repository.GenericRepository;
 
 import java.util.List;
 import java.util.Optional;

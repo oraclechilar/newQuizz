@@ -1,4 +1,4 @@
-package uz.jl.utils.validator;
+package uz.jl.validator;
 
 import uz.jl.configs.ApplicationContextHolder;
 import uz.jl.utils.BaseUtils;

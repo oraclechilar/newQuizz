@@ -1,33 +1,36 @@
-package uz.jl.mappers.subject;
+package uz.jl.mappers.answer;
 
-import org.bson.types.ObjectId;
+import uz.jl.dto.answer.AnswerCreateDto;
+import uz.jl.dto.answer.AnswerDto;
+import uz.jl.dto.answer.AnswerUpdateDto;
 import uz.jl.dto.subject.SubjectCreateDto;
 import uz.jl.dto.subject.SubjectDto;
 import uz.jl.dto.subject.SubjectUpdateDto;
+import uz.jl.entity.answer.Answer;
 import uz.jl.entity.subject.Subject;
 import uz.jl.mappers.GenericMapper;
 
 /**
  * @author Bakhromjon Wed, 4:00 PM 1/26/2022
  */
-public class SubjectMapper implements GenericMapper<Subject, SubjectDto,SubjectCreateDto, SubjectUpdateDto> {
+public class AnswerMapper implements GenericMapper<Answer, AnswerDto, AnswerCreateDto, AnswerUpdateDto> {
     @Override
-    public Subject fromDto(SubjectDto dto) {
+    public Answer fromDto(AnswerDto dto) {
         return null;
     }
 
     @Override
-    public Subject fromCreateDto(SubjectCreateDto dto) {
+    public Answer fromCreateDto(AnswerCreateDto dto) {
         return null;
     }
 
     @Override
-    public Subject fromUpdateDto(SubjectUpdateDto dto) {
+    public Answer fromUpdateDto(AnswerUpdateDto dto) {
         return null;
     }
 
     @Override
-    public SubjectDto toDto(Subject entity) {
+    public AnswerDto toDto(Answer entity) {
         return null;
     }
 }

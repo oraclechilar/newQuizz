@@ -1,7 +1,6 @@
-package uz.jl.resonse;
+package uz.jl.response;
 
 import lombok.*;
-import uz.jl.enums.HttpStatus;
 import uz.jl.enums.HttpStatus;
 
 

@@ -11,10 +11,9 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Users extends Auditable {
+public class User extends Auditable {
     private String username;
     private String password;
     private String email;
-    private List<Quiz> history;
-
+    private List<Quiz> quizzes;
 }

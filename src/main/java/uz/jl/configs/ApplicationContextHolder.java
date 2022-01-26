@@ -8,9 +8,8 @@ import com.mongodb.client.MongoDatabase;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 import uz.jl.entity.auth.User;
-import uz.jl.respository.user.UserRepository;
-
-
+import uz.jl.repository.user.UserRepository;
+import uz.jl.utils.BaseUtils;
 
 import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
 import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
@@ -18,9 +17,10 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 public class ApplicationContextHolder {
     private static MongoDatabase db;
     private final static UserRepository userRepository;
-
+    private final static BaseUtils baseUtils;
     static {
         userRepository = new UserRepository(User.class);
+        baseUtils = new BaseUtils();
     }
 
     public static <T> T getBean(Class<T> clazz) {
@@ -31,6 +31,7 @@ public class ApplicationContextHolder {
         return switch (beanName) {
             case "MongoDatabase" -> (T) db;
             case "UserRepository" -> (T) userRepository;
+            case "BaseUtils" -> (T) baseUtils;
             default -> throw new RuntimeException("Bean Not Found");
         };
     }
@@ -45,7 +46,7 @@ public class ApplicationContextHolder {
 
         try {
             MongoClient mongoClient = MongoClients.create(clientSettings);
-            db = mongoClient.getDatabase("quiz-app-b3");
+            db = mongoClient.getDatabase("mongo-contest");
         } catch (Exception e) {
             e.printStackTrace();
         }

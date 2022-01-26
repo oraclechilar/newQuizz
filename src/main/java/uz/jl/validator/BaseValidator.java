@@ -1,9 +1,7 @@
-package uz.jl.utils.validator;
+package uz.jl.validator;
 
 import uz.jl.dto.GenericBaseDto;
 import uz.jl.dto.GenericDto;
-import uz.jl.entity.Auditable;
-import uz.jl.utils.BaseUtils;
 
 import java.io.Serializable;
 
