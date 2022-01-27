@@ -6,10 +6,11 @@ import uz.jl.entity.Auditable;
 
 @Getter
 @Setter
+@ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Answer extends Auditable {
     private String text;
-    private boolean is_correct;
+    private int is_correct;
     private boolean is_selected;
 }

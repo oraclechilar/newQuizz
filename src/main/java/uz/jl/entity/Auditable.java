@@ -12,16 +12,11 @@ import java.util.Date;
 @Getter
 @Setter
 @ToString
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public abstract class Auditable {
     @BsonProperty(value = "_id")
-    private ObjectId id = new ObjectId();
+    private ObjectId id;
 
-    private Date createdAt = new Date();
-
-    private Date updatedAt;
-
-    private boolean deleted;
+    private Date createdAt;
 }

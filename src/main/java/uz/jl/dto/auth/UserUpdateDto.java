@@ -16,5 +16,6 @@ import java.util.List;
 @Builder
 public class UserUpdateDto extends GenericDto {
     private String username;
-    private String email;
+    private String password;
+    private String language;
 }

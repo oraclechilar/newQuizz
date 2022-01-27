@@ -3,26 +3,30 @@ package uz.jl.validator;
 import org.bson.types.ObjectId;
 import uz.jl.dto.auth.UserCreateDto;
 import uz.jl.dto.auth.UserUpdateDto;
+import uz.jl.utils.BaseUtils;
 
 /**
  * @author Bakhromjon Wed, 4:26 PM 1/26/2022
  */
 public class UserValidator extends BaseValidator<
-        UserCreateDto, UserUpdateDto, ObjectId>{
+        UserCreateDto, UserUpdateDto, ObjectId> {
 
+    public UserValidator(BaseUtils utils) {
+        super(utils);
+    }
 
     @Override
-    protected void validKey(ObjectId key) throws IllegalArgumentException {
+    public void validKey(ObjectId key) throws IllegalArgumentException {
 
     }
 
     @Override
-    protected void validOnCreate(UserCreateDto dto) throws IllegalArgumentException {
+    public void validOnCreate(UserCreateDto dto) throws IllegalArgumentException {
 
     }
 
     @Override
-    protected void validOnUpdate(UserUpdateDto dto) throws IllegalArgumentException {
+    public void validOnUpdate(UserUpdateDto dto) throws IllegalArgumentException {
 
     }
 }

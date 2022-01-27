@@ -22,7 +22,7 @@ import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
  * @param <E> -> Collection
  */
 public abstract class GenericDao<C extends GenericCriteria, E extends Auditable> extends AbstractRepository {
-    protected MongoDatabase db = ApplicationContextHolder.getBean(MongoDatabase.class );
+    protected MongoDatabase db = ApplicationContextHolder.getBean(MongoDatabase.class);
     protected MongoCollection<E> collection;
 
     public GenericDao(Class<E> clazz) {

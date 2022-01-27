@@ -2,6 +2,7 @@ package uz.jl.security;
 
 import lombok.*;
 import uz.jl.entity.quiz.Quiz;
+import uz.jl.enums.Role;
 
 import java.util.List;
 
@@ -17,5 +18,7 @@ public class Session {
     private String username;
     private String password;
     private String email;
+    private String language;
+    private Role role;
     private List<Quiz> quizzes;
 }

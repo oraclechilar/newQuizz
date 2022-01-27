@@ -3,6 +3,7 @@ package uz.jl.validator;
 import org.bson.types.ObjectId;
 import uz.jl.dto.answer.AnswerCreateDto;
 import uz.jl.dto.answer.AnswerUpdateDto;
+import uz.jl.utils.BaseUtils;
 
 
 /**
@@ -11,6 +12,10 @@ import uz.jl.dto.answer.AnswerUpdateDto;
 public class AnswerValidator extends BaseValidator<
         AnswerCreateDto, AnswerUpdateDto, ObjectId>{
 
+
+    protected AnswerValidator(BaseUtils utils) {
+        super(utils);
+    }
 
     @Override
     protected void validKey(ObjectId key) throws IllegalArgumentException {

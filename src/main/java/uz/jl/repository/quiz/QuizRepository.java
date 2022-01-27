@@ -37,7 +37,7 @@ public class QuizRepository extends GenericDao<QuizCriteria, Quiz>
     }
 
     @Override
-    public List<Quiz> list(QuizCriteria criteria) {
+    public List<Quiz> list() {
         return null;
     }
 

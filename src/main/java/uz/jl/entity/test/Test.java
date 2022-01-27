@@ -9,9 +9,11 @@ import java.util.List;
 
 @Getter
 @Setter
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Test extends Auditable {
-    private String questio;
+    private String question;
     private List<Answer> answers;
+
 }

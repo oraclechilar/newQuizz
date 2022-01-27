@@ -2,6 +2,7 @@ package uz.jl.services;
 
 import uz.jl.criteria.GenericCriteria;
 import uz.jl.dto.GenericDto;
+import uz.jl.entity.Auditable;
 import uz.jl.response.Data;
 import uz.jl.response.ResponseEntity;
 
@@ -11,8 +12,8 @@ import java.util.List;
 /**
  * @author Bakhromjon Wed, 9:55 AM 1/26/2022
  */
-public interface GenericService<D extends GenericDto, C extends GenericCriteria, K extends Serializable> {
-    ResponseEntity<Data<List<D>>> list(C criteria);
+public interface GenericService<M extends Auditable, K extends Serializable> {
+    ResponseEntity<Data<M>> get(K id);
 
-    ResponseEntity<Data<D>> get(K key);
+    ResponseEntity<Data<List<M>>> getList();
 }

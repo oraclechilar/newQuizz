@@ -2,6 +2,7 @@ package uz.jl.dto.auth;
 
 import lombok.*;
 import uz.jl.dto.GenericBaseDto;
+import uz.jl.enums.Role;
 
 /**
  * @author Bakhromjon Wed, 9:36 AM 1/26/2022
@@ -14,5 +15,6 @@ import uz.jl.dto.GenericBaseDto;
 public class UserCreateDto implements GenericBaseDto {
     private String username;
     private String password;
-    private String email;
+    private String role;
+    private String language;
 }

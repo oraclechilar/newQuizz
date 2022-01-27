@@ -3,6 +3,7 @@ package uz.jl.validator;
 import org.bson.types.ObjectId;
 import uz.jl.dto.quiz.QuizCreateDto;
 import uz.jl.dto.quiz.QuizUpdateDto;
+import uz.jl.utils.BaseUtils;
 
 
 /**
@@ -11,6 +12,10 @@ import uz.jl.dto.quiz.QuizUpdateDto;
 public class QuizValidator extends BaseValidator<
         QuizCreateDto, QuizUpdateDto, ObjectId>{
 
+
+    protected QuizValidator(BaseUtils utils) {
+        super(utils);
+    }
 
     @Override
     protected void validKey(ObjectId key) throws IllegalArgumentException {

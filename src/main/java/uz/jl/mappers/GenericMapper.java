@@ -7,16 +7,12 @@ import uz.jl.entity.Auditable;
 /**
  * @author Bakhromjon Wed, 3:25 PM 1/26/2022
  */
-public interface GenericMapper<
-        E extends Auditable,
-        D extends GenericDto,
-        CD extends GenericBaseDto,
-        UD extends GenericDto> extends GenericBaseMapper{
-    E fromDto(D dto);
+public interface GenericMapper<M, D, CD, UD> extends GenericBaseMapper{
+    M fromDto(D dto);
 
-    E fromCreateDto(CD dto);
+    M fromCreateDto(CD dto);
 
-    E fromUpdateDto(UD dto);
+    M fromUpdateDto(UD dto);
 
-    D toDto(E entity);
+    D toDto(M model);
 }

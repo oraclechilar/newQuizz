@@ -23,7 +23,7 @@ public interface GenericRepository<
             E extends Auditable,
             C extends GenericBaseCriteria,
             K extends Serializable> {
-        List<E> list(C criteria);
+        List<E> list();
 
         Optional<E> get(K key);
 }

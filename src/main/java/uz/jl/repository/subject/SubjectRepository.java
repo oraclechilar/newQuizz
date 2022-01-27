@@ -37,7 +37,7 @@ public class SubjectRepository extends GenericDao<SubjectCriteria, Subject>
     }
 
     @Override
-    public List<Subject> list(SubjectCriteria criteria) {
+    public List<Subject> list() {
         return null;
     }
 

@@ -3,6 +3,7 @@ package uz.jl.validator;
 import org.bson.types.ObjectId;
 import uz.jl.dto.test.TestCreateDto;
 import uz.jl.dto.test.TestUpdateDto;
+import uz.jl.utils.BaseUtils;
 
 
 /**
@@ -11,6 +12,10 @@ import uz.jl.dto.test.TestUpdateDto;
 public class TestValidator extends BaseValidator<
         TestCreateDto, TestUpdateDto, ObjectId>{
 
+
+    public TestValidator(BaseUtils utils) {
+        super(utils);
+    }
 
     @Override
     protected void validKey(ObjectId key) throws IllegalArgumentException {

@@ -5,11 +5,13 @@ import uz.jl.criteria.quiz.QuizCriteria;
 import uz.jl.dto.quiz.QuizCreateDto;
 import uz.jl.dto.quiz.QuizDto;
 import uz.jl.dto.quiz.QuizUpdateDto;
+import uz.jl.entity.quiz.Quiz;
 import uz.jl.mappers.quiz.QuizMapper;
 import uz.jl.repository.quiz.QuizRepository;
 import uz.jl.response.Data;
 import uz.jl.response.ResponseEntity;
 import uz.jl.services.AbstractService;
+import uz.jl.services.BaseGenericService;
 import uz.jl.services.GenericCrudService;
 import uz.jl.services.GenericService;
 
@@ -19,7 +21,7 @@ import java.util.List;
  * @author Bakhromjon Wed, 10:04 AM 1/26/2022
  */
 public class QuizService extends AbstractService<QuizRepository, QuizMapper>
-implements GenericCrudService<QuizCreateDto, QuizUpdateDto, ObjectId>, GenericService<QuizDto, QuizCriteria, ObjectId> {
+implements GenericCrudService<Quiz,QuizCreateDto, QuizUpdateDto, ObjectId>, BaseGenericService {
     public QuizService(QuizRepository repository, QuizMapper mapper) {
         super(repository, mapper);
     }
@@ -40,12 +42,12 @@ implements GenericCrudService<QuizCreateDto, QuizUpdateDto, ObjectId>, GenericSe
     }
 
     @Override
-    public ResponseEntity<Data<List<QuizDto>>> list(QuizCriteria criteria) {
+    public ResponseEntity<Data<Quiz>> get(ObjectId id) {
         return null;
     }
 
     @Override
-    public ResponseEntity<Data<QuizDto>> get(ObjectId key) {
+    public ResponseEntity<Data<List<Quiz>>> getList() {
         return null;
     }
 }
